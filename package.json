@@ -53,7 +53,8 @@
     "@types/react-helmet": "^6.1.5",
     "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.3.3",
-    "@types/styled-components": "^5.1.15"
+    "@types/styled-components": "^5.1.15",
+    "mini-css-extract-plugin": "2.4.5"
   },
   "homepage": "https://sihyunLee.github.io/React_Coin"
 }
