@@ -64,31 +64,21 @@ function Price({ coinId }: PriceProps) {
           <StyledTable>
             <StyledTableRow>
               <StyledTh>Date</StyledTh>
-              {data
-                ?.map((price) => (
-                  <StyledTd key={price.volume}>
-                    {price.time_open.substring(0, 10)}
-                  </StyledTd>
-                ))
-                .reverse()}
+              {data?.map((price) => (
+                <StyledTd key={price.volume}>{price.time_close}</StyledTd>
+              ))}
             </StyledTableRow>
             <StyledTableRow>
               <StyledTh>Lower</StyledTh>
-              {data
-                ?.map((price) => (
-                  <StyledTd key={price.volume}>{price.low.toFixed(2)}</StyledTd>
-                ))
-                .reverse()}
+              {data?.map((price) => (
+                <StyledTd key={price.volume}>{price.low}</StyledTd>
+              ))}
             </StyledTableRow>
             <StyledTableRow>
               <StyledTh>Upper</StyledTh>
-              {data
-                ?.map((price) => (
-                  <StyledTd key={price.volume}>
-                    {price.high.toFixed(2)}
-                  </StyledTd>
-                ))
-                .reverse()}
+              {data?.map((price) => (
+                <StyledTd key={price.volume}>{price.high}</StyledTd>
+              ))}
             </StyledTableRow>
           </StyledTable>
         </>

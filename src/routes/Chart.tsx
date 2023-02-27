@@ -35,12 +35,7 @@ function Chart({ coinId }: ChartProps) {
               {
                 data: data?.map((data) => ({
                   x: data.time_open,
-                  y: [
-                    data.open.toFixed(2),
-                    data.high.toFixed(2),
-                    data.low.toFixed(2),
-                    data.close.toFixed(2),
-                  ],
+                  y: [data.open, data.high, data.low, data.close],
                 })),
               },
             ] as unknown as number[]
