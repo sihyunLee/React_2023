@@ -1,11 +1,8 @@
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import Router from "./Router";
-import { ReactQueryDevtools } from "react-query/devtools";
-import { useState } from "react";
-import { darkTheme, lightTheme } from "./theme";
+import { createGlobalStyle } from "styled-components";
+import ToDoList from "./ToDoList";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,45 +54,23 @@ table {
   box-sizing: border-box;
 }
 body {
+  font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
   background-color:${(props) => props.theme.bgColor};
-  color:${(props) => props.theme.textColor}
+  color:${(props) => props.theme.textColor};
+  line-height: 1.2;
 }
 a {
   text-decoration:none;
-  color: inherit;
+  color:inherit;
 }
 `;
-const Button = styled.button`
-  width: 3.5rem;
-  height: 3.5rem;
-  border: none;
-  background-color: ${(props) => props.theme.textColor};
-  color: ${(props) => props.theme.bgColor}; // 테마 변경 컬러 지정
-  border-radius: 15px;
-  margin: 1rem;
-  cursor: pointer;
 
-  span {
-    font-size: 1rem;
-  }
-`;
 function App() {
-  const [themeMode, setThemeMode] = useState("Dark");
-  const theme = themeMode === "Dark" ? darkTheme : lightTheme;
-  const toggleTheme = () =>
-    setThemeMode(themeMode === "Dark" ? "Light" : "Dark");
-
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Button onClick={toggleTheme}>
-          <span>{themeMode}</span>
-        </Button>
-        <Router />
-        <ReactQueryDevtools />
-      </ThemeProvider>
+      <GlobalStyle />
+      <ToDoList />
     </>
   );
 }
