@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/sionTv/static/js/main.682f44c9.js",
+    "main.js": "/sionTv/static/js/main.0efbadb2.js",
     "index.html": "/sionTv/index.html",
-    "main.682f44c9.js.map": "/sionTv/static/js/main.682f44c9.js.map"
+    "main.0efbadb2.js.map": "/sionTv/static/js/main.0efbadb2.js.map"
   },
   "entrypoints": [
-    "static/js/main.682f44c9.js"
+    "static/js/main.0efbadb2.js"
   ]
 }
